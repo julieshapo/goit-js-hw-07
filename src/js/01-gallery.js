@@ -31,12 +31,27 @@ function onImageClick(event) {
     }
 
     const imageEl = event.target.dataset.source;  
-    
+      
     const instance = basicLightbox.create(`
     <img src=${imageEl} width="1280" >
-`)   
-    
-  instance.show()
+ `, {
+      onShow: (instance) => {
+    window.addEventListener('keydown', onEscapeBtnPress);
+    },
+      onClose: (instance) => {
+    window.removeEventListener('keydown', onEscapeBtnPress);
+      }, 
+    });   
+  
+   function onEscapeBtnPress(event) {
+      const isEscKey = event.code === 'Escape';
+      if (isEscKey) {
+        instance.close();
+      }
+    }
+  
+  
+    instance.show()
 
 }
 
