@@ -6,7 +6,7 @@ console.log(galleryItems);
 const galleryEl = document.querySelector('.gallery')
 
 const galleryMarkup = galleryItems.map((item) =>
-    `<div class="gallery__item">
+`<div class="gallery__item">
   <a class="gallery__link" href=${item.original} >
     <img
       class="gallery__image"
@@ -17,7 +17,6 @@ const galleryMarkup = galleryItems.map((item) =>
     />
   </a>
 </div>`).join('')
-
 
     
 galleryEl.insertAdjacentHTML('beforeend', galleryMarkup)
