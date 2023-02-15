@@ -1,6 +1,8 @@
 # goit-js-hw-07
 Homework JS #7
 
+https://julieshapo.github.io/goit-js-hw-07/src/
+
 ### goit-js-hw-07
 
 ## JavaScript course homework. Document Object Model. Event propagation. Event bubbling. Throttle &amp; Debounce. Lazysizes
